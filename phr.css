@@ -1,0 +1,263 @@
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+h2 {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+small {
+    font-size: 13px;
+}
+
+/* ===== CARDS ===== */
+.card {
+    border-radius: 12px;
+    border: none;
+}
+
+.card-header {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ===== TABLE ===== */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table thead th {
+    background: #0d6efd !important;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px;
+}
+
+.table tbody tr {
+    transition: all 0.2s ease-in-out;
+}
+
+.table tbody tr:hover {
+    background: #eef4ff;
+    transform: scale(1.01);
+}
+
+/* ===== IMAGE ===== */
+table img {
+    object-fit: cover;
+    border: 2px solid #dee2e6;
+}
+
+/* ===== BADGES ===== */
+.badge {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+/* ===== SEARCH BOX ===== */
+#searchBox {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+#searchBox:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 8px rgba(13,110,253,0.3);
+}
+
+/* ===== TABLE CARD SHADOW ===== */
+.card.shadow-lg {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+}
+
+/* ===== STATUS BADGES IMPROVEMENT ===== */
+.bg-success {
+    background: #28a745 !important;
+}
+
+.bg-warning {
+    background: #ffc107 !important;
+}
+
+.bg-danger {
+    background: #dc3545 !important;
+}
+
+.bg-info {
+    background: #17a2b8 !important;
+}
+
+.bg-secondary {
+    background: #6c757d !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+.table-container-custom {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        overflow: hidden;
+        border: 1px solid #eef2f1;
+        direction: rtl; /* لتوجيه العناصر من اليمين لليسار */
+    }
+
+    .modern-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: right;
+        font-family: 'Cairo', sans-serif;
+        font-size: 13.5px;
+    }
+
+    .modern-table th {
+        background-color: #fafafa;
+        color: #777777;
+        padding: 14px 16px;
+        font-weight: 600;
+        border-bottom: 1px solid #eef2f1;
+    }
+
+    .modern-table td {
+        padding: 14px 16px;
+        border-bottom: 1px solid #eef2f1;
+        color: #333333;
+        vertical-align: middle;
+    }
+
+    .modern-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* تصميم خلية الدواء مع الصورة */
+    .med-cell {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .med-img-box {
+        width: 45px;
+        height: 35px;
+        background-color: #f8fafc;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e2e8f0;
+        overflow: hidden;
+    }
+
+    .med-img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .med-img-box i {
+        color: #cbd5e1;
+        font-size: 16px;
+    }
+
+    .med-info h4 {
+        font-size: 13.5px;
+        font-weight: 600;
+        margin: 0 0 2px 0;
+        color: #1a1a1a;
+    }
+
+    /* بادجات الحالة الملونة الهادئة */
+    .status-badge {
+        padding: 5px 12px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .badge-available {
+        background-color: #eaf9f5;
+        color: #1ebd9b;
+    }
+
+    .badge-low {
+        background-color: #fff1ed;
+        color: #ff6b4a;
+    }
+
+    .badge-out {
+        background-color: #fee2e2;
+        color: #ef4444;
+    }
+
+    .text-danger-custom {
+        color: #ef4444 !important;
+        font-weight: 600;
+    }
+
+    /* أزرار الإجراءات التعديل والحذف */
+    .table-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .action-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+        border: 1px solid #e0e0e0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #777777;
+        text-decoration: none;
+        transition: all 0.2s;
+        background: #ffffff;
+    }
+
+    .action-icon:hover {
+        background-color: #f1f5f9;
+        color: #333333;
+    }
+
+    .action-icon.delete:hover {
+        border-color: #fee2e2;
+        color: #ef4444;
+        background-color: #fef2f2;
+    }

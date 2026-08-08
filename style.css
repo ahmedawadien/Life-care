@@ -1,0 +1,302 @@
+/* تطبيق الخط على جميع العناصر مع استثناء وسوم الأيقونات الخاصة بـ Font Awesome */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* نطبق خط Poppins على جسم الصفحة والعناصر النصية بدلاً من تطبيقها الشامل بالنجمة */
+body, h1, h2, h3, h4, h5, h6, p, span, a, input, button, select, td, th {
+    font-family: 'Poppins', 'Cairo', sans-serif;
+}
+
+/* كود الحماية الصارم لمنع أي تداخل مع الأيقونات */
+.fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free" !important;
+    display: inline-block !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-rendering: auto !important;
+    line-height: 1 !important;
+}
+span {
+    white-space: nowrap ;
+}
+/* باقي كود الـ CSS الخاص بك يكمل هنا طبيعي جداً... */
+body{
+    background:#f4f7fc;
+}
+
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:260px;
+    height:100%;
+    background:#0F766E;
+    color:#fff;
+    padding:25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:40px;
+}
+
+.logo i{
+    font-size:35px;
+}
+
+.logo h3{
+    font-size:24px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    margin:15px 0;
+}
+
+.sidebar li a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    color:white;
+    text-decoration:none;
+    padding:15px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.sidebar li a:hover,
+.sidebar .active a{
+    background:#14B8A6;
+}
+
+.main{
+    margin-left:260px;
+    padding:30px;
+}
+.bg-white{
+    transition: all 0.25s linear;
+}
+.bg-white:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,.08);
+    transform: translateY(-4px);
+}
+.navbar{
+    background:#fff;
+    border-radius:0px 0px 15px 15px;
+    padding:15px 25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.card{
+    border:none;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.stat-card{
+    padding:25px;
+}
+
+.stat-card h2{
+    font-weight:700;
+    margin-top:15px;
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:22px;
+}
+
+.bg1{background:#0EA5E9;}
+.bg2{background:#10B981;}
+.bg3{background:#F59E0B;}
+.bg4{background:#EF4444;}
+
+.table{
+    margin:0;
+}
+
+.table thead{
+    background:#eef3ff;
+}
+
+.chart-card{
+    padding:20px;
+}
+
+.progress{
+    height:8px;
+}
+
+@media(max-width:992px){
+
+.sidebar{
+    width:80px;
+}
+
+.sidebar h3,
+.sidebar span{
+    display:none;
+}
+
+.main{
+    margin-left:80px;
+}
+
+}
+
+@media(max-width:768px){
+.fu{
+    width: 240px;
+}
+.main{
+    margin-left:0;
+}
+
+.sidebar{
+    display:none;
+}
+
+}
+
+
+    [data-animate] {
+        opacity: 0;
+        will-change: transform, opacity;
+    }
+
+    @keyframes slide-in-top {
+        0% {
+            opacity: 0;
+            transform: translateY(-30px);  
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0); 
+        }
+    }
+    /* التنسيقات العامة للروابط */
+    .nav-link {
+        transition: all 0.2s ease-in-out;
+    }
+    .green-sidebar-link:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: #ffffff !important;
+    }
+    .logout-green-link:hover {
+        background-color: rgba(239, 68, 68, 0.2) !important;
+        color: #fecaca !important;
+    }
+
+    /* === تنسيق الـ Sidebar على الهواتف والشاشات الصغيرة === */
+    @media (max-width: 991.98px) {
+        .my-custom-sidebar {
+            position: fixed !important;
+            top: 0;
+            left: -260px !important; /* إخفاء كامل يسار الشاشة */
+            height: 100vh;
+            z-index: 1050 !important;
+            display: flex !important;
+            flex-direction: column;
+            transition: left 0.3s ease-in-out !important;
+        }
+        
+        /* عند تفعيل القائمة بالضغط على الزر */
+        .my-custom-sidebar.show-sidebar {
+            left: 0 !important; /* تظهر من اليسار */
+        }
+    }
+
+    /* === تنسيق الـ Sidebar على الشاشات الكبيرة (الكمبيوتر) === */
+    @media (min-width: 992px) {
+        .my-custom-sidebar {
+            position: sticky !important;
+            top: 0;
+            left: 0 !important;
+            height: 100vh;
+            display: flex !important;
+            flex-direction: column;
+            z-index: 1000;
+        }
+    }
+@media (max-width:768px){
+    .gr{
+        margin: auto;
+        margin-top: 40px;
+        padding: 50px ;
+    }
+    .wa{
+        font-size: 16px ;
+    }
+}
+
+.fade-in {
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+/* The keyframes that handle the opacity shift */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* From Uiverse.io by niat786 */ 
+.er {
+ border: none;
+ color: #fff;
+ background: rgba(245, 11, 11, 0.09) !important;
+ border-radius: 20px;
+ background-size: 100% auto;
+ font-family: inherit;
+ font-size: 17px;
+ padding: 0.6em 1.5em;
+}
+
+.er:hover {
+ background-position: right center;
+ background-size: 200% auto;
+ -webkit-animation: pulse 2s infinite;
+ animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+ 0% {
+  box-shadow: 0 0 0 0 #da480566;
+ }
+
+ 70% {
+  box-shadow: 0 0 0 10px rgba(236, 60, 6, 0);
+ }
+
+ 100% {
+  box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+ }
+}
